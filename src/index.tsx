@@ -1,6 +1,9 @@
+import './index.css';
+
+import { Auth0Provider } from '@auth0/auth0-react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +12,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Auth0Provider
+      domain="marcogi.eu.auth0.com"
+      clientId="xcTDA68RGW3xE8MfIhzrV68OWBNs42cK"
+      redirectUri={window.location.origin}
+    >
+      <App />
+    </Auth0Provider>
   </React.StrictMode>
 );
 
