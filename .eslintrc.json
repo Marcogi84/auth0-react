@@ -13,6 +13,9 @@
   ],
   "overrides": [],
   "parserOptions": {
+    "ecmaFeatures": {
+      "tsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
